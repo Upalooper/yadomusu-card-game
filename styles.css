@@ -1,0 +1,155 @@
+:root {
+  color-scheme: dark;
+  --bg: #111321;
+  --panel: #1b2135;
+  --accent: #f8b84e;
+  --accent-2: #72d6ff;
+  --text: #e9ecf8;
+  --muted: #9ea6c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Sans", "Meiryo", sans-serif;
+  background: linear-gradient(135deg, #0d1020, #1b2135 45%, #2c1644);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+header {
+  padding: 1.2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+section {
+  background: rgba(12, 16, 31, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+button {
+  border: none;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  background: #2e3657;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+button:hover:enabled {
+  transform: translateY(-1px);
+  background: #465081;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.card-grid,
+.event-grid {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.card-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  padding: 0.6rem;
+}
+
+.card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.94rem;
+  color: var(--accent-2);
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  white-space: pre-line;
+}
+
+#logPanel {
+  max-height: 270px;
+  overflow: auto;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.log-line {
+  border-left: 2px solid #596193;
+  padding-left: 0.5rem;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(130px, 1fr));
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.stat-item {
+  background: #252d47;
+  border-radius: 8px;
+  padding: 0.45rem;
+}
+
+.event-locked {
+  opacity: 0.5;
+  filter: grayscale(0.7);
+}
+
+.event-card {
+  background: #252d47;
+  border-radius: 8px;
+  padding: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.event-card h4 {
+  margin: 0 0 0.4rem;
+  color: #ffc2df;
+}
+
+.event-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}

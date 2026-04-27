@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>宿の看板娘 育成カードゲーム</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>宿の看板娘 返済記</h1>
+      <p>18日以内に借金を返して、最高のエンディングを目指そう。</p>
+    </header>
+
+    <main>
+      <section class="status" id="statusPanel"></section>
+
+      <section class="phase" id="phasePanel">
+        <h2 id="phaseTitle">準備フェイズ</h2>
+        <div id="phaseDescription"></div>
+        <div id="actionButtons" class="buttons"></div>
+      </section>
+
+      <section class="cards">
+        <h2>手札</h2>
+        <div id="hand" class="card-grid"></div>
+      </section>
+
+      <section class="log">
+        <h2>ログ</h2>
+        <div id="logPanel"></div>
+      </section>
+
+      <section class="deck">
+        <h2>デッキ管理</h2>
+        <div class="buttons" id="deckButtons"></div>
+        <div id="deckList"></div>
+      </section>
+
+      <section class="events">
+        <h2>イベント回想</h2>
+        <div id="eventGallery" class="event-grid"></div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
