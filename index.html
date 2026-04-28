@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>宿の看板娘 返済記</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-root">
+      <header class="topbar">
+        <h1>宿の看板娘 返済記</h1>
+        <div id="resourceBar" class="resource-bar"></div>
+      </header>
+
+      <main class="board">
+        <section class="left-panel">
+          <article class="panel">
+            <h2 id="phaseTitle">準備フェイズ</h2>
+            <div id="phaseDescription"></div>
+            <div id="actionButtons" class="buttons"></div>
+          </article>
+
+          <article class="panel">
+            <h2>ログ</h2>
+            <div id="logPanel" class="log-panel"></div>
+          </article>
+        </section>
+
+        <section class="center-panel">
+          <article class="panel battle-field">
+            <div class="piles">
+              <div class="pile" id="drawPile">山札 0</div>
+              <div class="pile" id="discardPile">捨て札 0</div>
+              <div class="pile" id="dayInfo">Day 1 / 18</div>
+            </div>
+            <div id="statusSummary" class="status-summary"></div>
+          </article>
+
+          <article class="panel deck-panel">
+            <h2>デッキ管理・イベント</h2>
+            <div class="buttons" id="deckButtons"></div>
+            <div id="deckList" class="deck-list"></div>
+            <h3>イベント回想</h3>
+            <div id="eventGallery" class="event-grid"></div>
+          </article>
+        </section>
+
+        <aside class="right-panel panel">
+          <h2>カード詳細</h2>
+          <div id="cardDetail" class="card-detail">
+            <p>カードにカーソルを合わせると詳細が表示されます。</p>
+            <p>カードを上にドラッグして使用！</p>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="hand-zone">
+        <div class="hand-header">
+          <h2>手札</h2>
+          <p>上にドラッグするとプレイ</p>
+        </div>
+        <div id="hand" class="hand"></div>
+      </footer>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
